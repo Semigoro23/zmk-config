@@ -15,7 +15,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build (ZMK)
+      # Official ZMK build action
+      - name: Build firmware
         uses: zmkfirmware/zmk-build-action@v1
         with:
           config_path: config
