@@ -1,31 +1,5 @@
 name: Build ZMK firmware
-
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "config/**"
-      - "build.yml"
-      - ".github/workflows/**"
-
+on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Official ZMK build action
-      - name: Build firmware
-        uses: zmkfirmware/zmk-build-action@v1
-        with:
-          config_path: config
-          build_matrix_path: build.yml
-
-      - name: Upload firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: zmk-firmware
-          path: |
-            **/*.uf2
-            **/*.bin
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
