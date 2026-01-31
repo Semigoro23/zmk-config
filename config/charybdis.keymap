@@ -11,12 +11,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 12
 
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
@@ -33,7 +27,7 @@
 };
 
 / {
-    /* ===== Encoder behaviors (scroll wheels) ===== */
+    /* Encoder behaviors */
     scroll_vertical_encoder: scroll_vertical_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -59,13 +53,13 @@
          * ========================= */
         layer_0 {
             bindings = <
-                &kp ESC         &kp N1   &kp N2   &kp N3   &kp N4   &kp N5      &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BACKSPACE
-                &kp TAB         &kp Q    &kp W    &kp E    &kp R    &kp T       &kp Y    &kp U    &kp I    &kp O    &kp P    &kp RBKT
-                &kp LSHIFT      &kp A    &kp S    &kp D    &kp F    &kp G       &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp COLON
-                &kp LCTRL       &kp Z    &kp X    &kp C    &kp V    &kp B       &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH &kp MINUS
+                &kp ESC         &kp N1   &kp N2   &kp N3   &kp N4    &kp N5      &kp N6   &kp N7   &kp N8    &kp N9    &kp N0     &kp BACKSPACE
+                &kp TAB         &kp Q    &kp W    &kp E    &kp R     &kp T       &kp Y    &kp U    &kp I     &kp O     &kp P      &kp RBKT
+                &kp LSHIFT      &kp A    &kp S    &kp D    &kp F     &kp G       &kp H    &kp J    &kp K     &kp L     &kp SEMI   &kp COLON
+                &kp LCTRL       &kp Z    &kp X    &kp C    &kp V     &kp B       &kp N    &kp M    &kp COMMA &kp DOT   &kp FSLH   &kp MINUS
 
-                                              &kp LALT   &kp SPACE  &mo 1       &mo 2      &kp ENTER
-                                                        &mkp MB1    &mkp MB2    &mo 3
+                                              &kp LALT   &kp SPACE &mo 1       &mo 2     &kp ENTER
+                                                        &mkp MB1  &mkp MB2    &mo 3
             >;
 
             sensor-bindings =
@@ -74,22 +68,17 @@
         };
 
         /* =========================
-         * layer1 (shortcuts + symbols row)
-         * Excel反映:
-         *  - 上段:  ! @ # $ % ^   |  & ` ( ) - =
-         *  - home / win+r / win+d / win+space / printscr
-         *  - del / ; / [ ] / ¥(→BSLH)
-         *  - ctrl+z/a/y/c/v と . . /
+         * layer1 (Shortcuts / Symbols)
          * ========================= */
         layer_1 {
             bindings = <
-                &kp LS(N1)     &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)   &kp LS(N7)  &kp GRAVE  &kp LS(N9)  &kp LS(N0)  &kp MINUS  &kp EQUAL
-                &kp TAB        &none       &none       &kp HOME    &kp LG(R)   &kp HOME     &kp END     &kp END    &kp END     &kp LBKT    &kp RBKT   &none
-                &kp CAPS       &none       &kp PSCRN   &kp LG(D)   &kp LC(C)   &kp BACKSPACE &kp DEL     &kp LC(V)  &kp DEL     &kp SEMI    &none      &kp BSLH
-                &kp LCTRL      &kp LG(SPACE) &none     &kp LC(Z)   &kp LC(A)   &kp LC(Y)    &none       &kp LC(V)  &kp DOT     &kp DOT     &kp FSLH   &none
+                &kp EXCL        &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &none      &kp AMPS &kp GRAVE &kp LPAR  &kp RPAR  &kp EQUAL  &kp INT_YEN
+                &kp TAB         &none    &none     &kp HOME  &kp LG(R) &kp HOME   &kp END  &kp END   &kp END   &none     &none      &none
+                &kp CAPS        &none    &none     &kp PSCRN &kp LG(D) &kp LC(C)  &kp DEL  &kp LC(V) &kp DEL   &none     &none      &kp BACKSPACE
+                &kp LCTRL       &kp LG(SPACE) &none &kp LC(Z) &kp LC(A) &kp LC(Y) &none    &kp LC(V) &none     &none     &none      &none
 
-                                              &kp LALT   &kp SPACE  &trans      &trans      &kp ENTER
-                                                        &mkp MB1    &mkp MB2    &trans
+                                              &kp LALT   &kp SPACE &trans      &mo 2     &kp ENTER
+                                                        &mkp MB1  &mkp MB2    &mo 3
             >;
 
             sensor-bindings =
@@ -98,22 +87,17 @@
         };
 
         /* =========================
-         * layer2 (F-keys / symbols / del / home / end)
-         * Excel反映:
-         *  - esc + F1..F10
-         *  - ! " # $ % | & ' ( ) del
-         *  - [ ; (  | ) : ] @  + home
-         *  - win + . / + end
+         * layer2 (US symbols + F-keys / nav)
          * ========================= */
         layer_2 {
             bindings = <
-                &kp ESC        &kp F1    &kp F2    &kp F3    &kp F4    &kp F5     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &none
-                &kp TAB        &kp EXCL  &kp DQT   &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR  &kp DEL   &none
-                &kp LSHIFT     &none     &none     &kp LBKT  &kp SEMI  &kp LPAR   &kp RPAR  &kp COLON &kp RBKT  &kp AT    &none     &kp HOME
-                &kp LCTRL      &kp LGUI  &none     &none     &none     &kp DOT    &kp DOT   &kp FSLH  &none     &none     &none     &kp END
+                &kp ESC         &kp F1    &kp F2    &kp F3    &kp F4    &kp F5     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &none
+                &kp TAB         &kp EXCL  &kp DQT   &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR  &kp DEL   &none
+                &kp LSHIFT      &none     &none     &kp LBKT  &kp SEMI  &kp LPAR   &kp RPAR  &kp COLON &kp RBKT  &kp AT    &none     &kp HOME
+                &kp LCTRL       &kp LGUI  &none     &none     &none     &kp COMMA  &kp DOT   &kp FSLH  &none     &none     &none     &kp END
 
-                                              &kp LALT   &kp SPACE  &trans      &trans      &kp ENTER
-                                                        &mkp MB1    &mkp MB2    &trans
+                                              &kp LALT   &kp SPACE  &mo 1    &trans   &kp ENTER
+                                                        &mkp MB1   &mkp MB2  &mo 3
             >;
 
             sensor-bindings =
@@ -122,21 +106,17 @@
         };
 
         /* =========================
-         * layer3 (Macros + arrows + volume)
-         * Excel反映:
-         *  - M1..M10 は ZMKに無いので F13..F22 で代用
-         *  - 矢印: ← ↑ ↓ →
-         *  - vol up / vol down
+         * layer3 (M1..M10 as F13..F22 + arrows + volume)
          * ========================= */
         layer_3 {
             bindings = <
-                &kp ESC        &kp F13   &kp F14   &kp F15   &kp F16   &kp F17    &kp F18   &kp F19   &kp F20   &kp F21   &kp F22   &none
-                &kp TAB        &none     &none     &none     &none     &none      &none     &none     &none     &none     &none     &kp C_VOL_UP
-                &kp LSHIFT     &none     &none     &none     &none     &none      &none     &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &kp C_VOL_DN
-                &kp LCTRL      &kp LGUI  &none     &none     &none     &none      &none     &none     &none     &none     &none     &none
+                &kp ESC         &kp F13   &kp F14   &kp F15   &kp F16   &kp F17    &kp F18   &kp F19   &kp F20   &kp F21   &kp F22   &none
+                &kp TAB         &none     &none     &none     &none     &none      &none     &none     &kp UP    &none     &none     &kp C_VOL_UP
+                &kp LSHIFT      &none     &none     &none     &none     &none      &none     &kp LEFT  &kp DOWN  &kp RIGHT &none     &kp C_VOL_DN
+                &kp LCTRL       &kp LGUI  &none     &none     &none     &none      &none     &none     &none     &none     &none     &none
 
-                                              &kp LALT   &kp SPACE  &trans      &trans      &kp ENTER
-                                                        &mkp MB1    &mkp MB2    &trans
+                                              &kp LALT   &kp SPACE &mo 1       &mo 2     &kp ENTER
+                                                        &mkp MB1  &mkp MB2    &trans
             >;
 
             sensor-bindings =
