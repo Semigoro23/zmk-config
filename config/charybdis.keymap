@@ -81,7 +81,7 @@
             bindings = <
                 &kp EXCL        &kp AT     &kp HASH   &kp DLLR    &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTERISK &kp LPAR   &kp RPAR   &kp MINUS  &kp INT_YEN
 
-                &kp TAB         &none      &none      &kp LG(E)   &kp LG(R)  &kp LC(T)       &kp LC(Y)    &kp END      &kp END    &kp LBKT   &kp RBKT   &kp INT_YEN
+                &kp TAB         &none      &kp LC(W)  &kp LG(E)   &kp LG(R)  &kp LC(T)       &kp LC(Y)    &kp END      &kp END    &kp LBKT   &kp RBKT   &kp INT_YEN
                 &kp CAPS        &none      &kp PSCRN  &kp LG(D)   &kp LC(C)  &kp LC(X)      &kp DEL    &kp LC(V)    &kp DEL    &kp LG(L)  &none      &none
                 &kp LCTRL       &kp LC(Z)  &none      &kp LC(Z)   &kp LC(A)  &kp BACKSPACE  &kp LC(N)  &kp LC(V)    &kp COMMA  &kp DOT    &kp FSLH   &none
 
