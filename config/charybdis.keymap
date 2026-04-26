@@ -82,8 +82,8 @@
                 &kp EXCL        &kp AT     &kp HASH   &kp DLLR    &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTERISK &kp LPAR   &kp RPAR   &kp MINUS  &kp INT_YEN
 
                 &kp TAB         &none      &kp LC(W)  &kp LG(E)   &kp LG(R)  &kp LC(T)       &kp LC(Y)    &kp END      &kp END    &kp LBKT   &kp RBKT   &kp INT_YEN
-                &kp CAPS        &none      &kp PSCRN  &kp LG(D)   &kp LC(C)  &kp LC(X)      &kp DEL    &kp LC(V)    &kp DEL    &kp LG(L)  &none      &none
-                &kp LCTRL       &kp LC(Z)  &none      &kp LC(Z)   &kp LC(A)  &kp BACKSPACE  &kp LC(N)  &kp LC(V)    &kp COMMA  &kp DOT    &kp FSLH   &none
+                &kp CAPS        &none      &kp PSCRN  &kp LG(D)   &kp LC(C)  &kp LC(X)      &kp DEL    &kp LC(V)    &kp DEL    &kp LG(L)  &none      &kp BACKSLASH
+                &kp LCTRL       &kp LC(Z)  &none      &kp LC(Z)   &kp LC(A)  &kp BACKSPACE  &kp LC(N)  &kp LC(V)    &kp COMMA  &kp DOT    &kp FSLH   &kp UNDERSCORE
 
                                               &kp LALT   &kp SPACE  &trans           &mo 2     &kp ENTER
                                                          &mkp MB1   &mkp MB2         &mo 3
@@ -100,9 +100,9 @@
         layer_2 {
             bindings = <
                 &kp ESC         &kp F1    &kp F2   &kp F3    &kp F4     &kp F5      &kp F6     &kp F7      &kp F8    &kp F9     &kp F10    &none
-                &kp TAB         &kp EXCL  &kp DQT  &kp HASH  &kp DLLR   &kp PRCNT   &kp AMPS   &kp SQT     &kp LPAR  &kp RPAR   &kp DEL    &none
-                &kp LSHIFT      &none     &none    &kp LBKT  &kp SEMI   &kp LPAR    &kp RPAR   &kp COLON   &kp RBKT  &kp AT     &none      &kp HOME
-                &kp LCTRL       &kp LGUI  &none    &none     &none      &kp DOT     &kp DOT    &kp FSLH    &none     &none      &none      &kp END
+                &kp TAB         &kp EXCL  &kp DQT  &kp HASH  &kp DLLR   &kp PRCNT   &kp AMPS   &kp SQT     &kp LPAR  &kp RPAR   &kp DEL    &kp PIPE
+                &kp LSHIFT      &none     &none    &kp LBKT  &kp SEMI   &kp LPAR    &kp RPAR   &kp COLON   &kp RBKT  &kp AT     &none      &kp BACKSLASH
+                &kp LCTRL       &kp LGUI  &none    &none     &none      &kp DOT     &kp DOT    &kp FSLH    &kp COMMA     &kp DOT      &none      &kp UNDERSCORE
 
                                               &kp LALT   &kp SPACE  &mo 1      &trans    &kp ENTER
                                                         &mkp MB1   &mkp MB2   &mo 3
