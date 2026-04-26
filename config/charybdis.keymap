@@ -100,7 +100,7 @@
         layer_2 {
             bindings = <
                 &kp ESC         &kp F1    &kp F2   &kp F3    &kp F4     &kp F5      &kp F6     &kp F7      &kp F8    &kp F9     &kp F10    &none
-                &kp TAB         &kp EXCL  &kp DQT  &kp HASH  &kp DLLR   &kp PRCNT   &kp AMPS   &kp SQT     &kp LPAR  &kp RPAR   &kp DEL    &kp PIPE
+                &kp TAB         &kp EXCL  &kp DQT  &kp HASH  &kp DLLR   &kp PRCNT   &kp AMPS   &kp SQT     &kp LPAR  &kp RPAR   &kp DEL    &kp LS(BSLH)
                 &kp LSHIFT      &none     &none    &kp LBKT  &kp SEMI   &kp LPAR    &kp RPAR   &kp COLON   &kp RBKT  &kp AT     &none      &kp BACKSLASH
                 &kp LCTRL       &kp LGUI  &none    &none     &none      &kp DOT     &kp DOT    &kp FSLH    &kp COMMA     &kp DOT      &none      &kp UNDERSCORE
 
