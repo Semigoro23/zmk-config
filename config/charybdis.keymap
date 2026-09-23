@@ -79,14 +79,14 @@
          * ========================= */
         layer_1 {
             bindings = <
-                &kp EXCL        &kp AT     &kp HASH   &kp DLLR    &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTERISK &kp LPAR   &kp RPAR   &kp MINUS  &kp INT_YEN
+                &kp EXCL        &kp AT     &kp HASH   &kp DLLR    &kp PRCNT  &kp CARET          &kp AMPS  &kp ASTERISK &kp LPAR   &kp RPAR   &kp MINUS  &kp BACKSPACE
 
-                &kp TAB         &none      &kp LC(W)  &kp LG(E)   &kp LG(R)  &kp LC(T)       &kp LC(Y)    &kp END      &kp END    &kp LBKT   &kp RBKT   &kp INT_YEN
-                &kp CAPS        &none      &kp PSCRN  &kp LG(D)   &kp LC(C)  &kp LC(X)      &kp DEL    &kp LC(V)    &kp DEL    &kp LG(L)  &none      &kp LS(BSLH)
-                &kp LCTRL       &kp LC(Z)  &none      &kp LC(Z)   &kp LC(A)  &kp BACKSPACE  &kp LC(N)  &kp LC(V)    &kp COMMA  &kp DOT    &kp FSLH   &kp UNDERSCORE
+                &kp TAB         &none      &kp LC(W)  &kp LG(E)   &kp LG(R)  &kp LC(T)          &kp LC(Y)  &kp END      &kp END    &kp LBKT   &kp RBKT   &kp INT_YEN
+                &kp CAPS        &none      &kp PSCRN  &kp LG(D)   &kp LC(C)  &kp LC(X)          &kp DEL    &kp LC(V)    &kp DEL    &kp LG(L)  &none      &kp LS(BSLH)
+                &kp LCTRL       &kp LC(Z)  &none      &kp LC(Z)   &kp LC(A)  &kp BACKSPACE      &kp LC(N)  &kp LC(V)    &kp COMMA  &kp DOT    &kp FSLH   &kp UNDERSCORE
 
-                                              &kp LALT   &kp SPACE  &trans           &mo 2     &kp ENTER
-                                                         &mkp MB1   &mkp MB2         &mo 3
+                                              &kp LALT   &kp SPACE  &trans                      &mo 2     &kp ENTER
+                                                         &mkp MB1   &mkp MB2                    &mo 3
             >;
 
             sensor-bindings =
@@ -99,13 +99,13 @@
          * ========================= */
         layer_2 {
             bindings = <
-                &kp ESC         &kp F1    &kp F2   &kp F3    &kp F4     &kp F5      &kp F6     &kp F7      &kp F8    &kp F9     &kp F10    &kp PIPE
-                &kp TAB         &kp EXCL  &kp DQT  &kp HASH  &kp DLLR   &kp PRCNT   &kp AMPS   &kp SQT     &kp LPAR  &kp RPAR   &kp DEL    &kp LS(BSLH)
-                &kp LSHIFT      &none     &none    &kp LBKT  &kp SEMI   &kp LPAR    &kp RPAR   &kp COLON   &kp RBKT  &kp AT     &none      &kp BACKSLASH
-                &kp LCTRL       &kp LGUI  &none    &none     &none      &kp DOT     &kp DOT    &kp FSLH    &kp COMMA     &kp DOT      &none      &kp UNDERSCORE
+                &kp ESC         &kp F1    &kp F2        &kp F3        &kp F4     &kp F5             &kp F6      &kp F7      &kp F8        &kp F9      &kp F10       &kp TILDE
+                &kp TAB         &kp EXCL  &kp STAR      &kp HASH      &kp DLLR   &kp PRCNT          &kp SQT     &kp DQT     &kp PLUS      &kp MINUS   &kp QMARK     &kp PIPE
+                &kp LSHIFT      &none     &kp LT        &kp LBKT      &kp LBRC   &kp LPAR           &kp RPAR    &kp RBRC    &kp RBKT      &kp GT      &kp EQUAL     &kp BACKSLASH
+                &kp LCTRL       &kp LGUI  &kp CARET     &kp AMPS      &kp SEMI   &kp COLON          &kp FSLH    &kp AT      &kp COMMA     &kp DOT     &kp GRAVE     &kp UNDERSCORE
 
-                                              &kp LALT   &kp SPACE  &mo 1      &trans    &kp ENTER
-                                                        &mkp MB1   &mkp MB2   &mo 3
+                                                      &kp LALT   &kp SPACE  &mo 1                     &trans    &kp ENTER
+                                                                 &mkp MB1   &mkp MB2                  &mo 3
             >;
 
             sensor-bindings =
@@ -118,10 +118,10 @@
          * ========================= */
         layer_3 {
             bindings = <
-                &kp ESC         &kp F13  &kp F14  &kp F15  &kp F16  &kp F17     &kp F18  &kp F19  &kp F20  &kp F21  &kp F22    &none
-                &kp TAB         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4       &none    &none    &kp UP   &none    &none      &kp C_VOL_UP
-                &kp LSHIFT      &none    &none    &none    &none    &kp LC(LS(TAB))       &kp LC(TAB)    &kp LEFT &kp DOWN &kp RIGHT &none     &kp C_VOL_DN
-                &kp LCTRL       &kp LGUI &none    &none    &none    &kp HOME       &kp END    &none    &none    &none    &none      &kp RCTRL
+                &kp ESC         &kp F11         &kp F12           &kp F13         &kp F14          &kp F15          &kp F16        &kp F17  &kp F18    &kp F19    &kp F20    &kp BACKSPACE
+                &kp TAB         &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4     &none          &none    &kp UP     &none      &none      &kp C_VOL_UP
+                &kp LSHIFT      &none           &none             &none           &none            &kp LC(LS(TAB))  &kp LC(TAB)    &kp LEFT &kp DOWN   &kp RIGHT  &none      &kp C_VOL_DN
+                &kp LCTRL       &kp LGUI        &none             &none           &none            &kp HOME         &kp END        &none    &none      &none      &none      &kp RCTRL
 
                                               &kp LALT   &kp SPACE  &mo 1      &mo 2     &kp ENTER
                                                         &mkp MB1   &mkp MB2   &trans
