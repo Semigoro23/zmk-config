@@ -16,8 +16,8 @@
  * 1.1倍にしたい場合は 11/10 にできます（小数は使わず分数で調整）
  * 例: <&zip_xy_scaler 11 10>
  */
-&mmv_input_listener { input-processors = <&zip_xy_scaler 25 10>; };
-&msc_input_listener { input-processors = <&zip_scroll_scaler 25 10>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 30 10>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 30 10>; };
 
 &msc {
     acceleration-exponent = <0>;
